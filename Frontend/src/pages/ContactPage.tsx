@@ -1,4 +1,3 @@
-import AnimatedContent from "../components/animated-content";
 import { useState } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
