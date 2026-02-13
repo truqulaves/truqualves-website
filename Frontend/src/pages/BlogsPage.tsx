@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import AnimatedContent from "../components/animated-content";
 import { ArrowUpRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
@@ -47,30 +46,30 @@ export default function BlogsPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="bg-linear-to-br from-teal-50 via-blue-50 to-slate-50 px-4 md:px-16 lg:px-24 xl:px-32 pt-32 pb-16 border-b border-gray-200">
+            <section className="bg-linear-to-br from-teal-50 via-blue-50 to-slate-50 px-4 md:px-16 lg:px-24 xl:px-32 pt-32 pb-5 border-b border-gray-200">
                 <div className="max-w-4xl mx-auto text-center">
-                    <AnimatedContent>
+                    <div>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 mb-4">
                             <span className="text-sm font-semibold text-teal-700">Our blog</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-4 font-urbanist">
+                        <h1 className="text-4xl md:text-4xl font-bold text-slate-900 mb-4 font-urbanist">
                             Stories and Interviews
                         </h1>
-                        <p className="text-lg text-gray-600">
+                        {/* <p className="text-lg text-gray-600">
                             Stories, interviews, and updates from the TruQual team.
-                        </p>
-                    </AnimatedContent>
+                        </p> */}
+                    </div>
                 </div>
             </section>
  
             {/* All Blog Posts */}
             <section className="px-4 md:px-16 lg:px-24 xl:px-32 py-16 bg-gray-50">
                 <div className="max-w-7xl mx-auto">
-                    <AnimatedContent>
+                    {/* <AnimatedContent>
                         <h2 className="text-2xl font-bold text-slate-900 mb-8 font-urbanist">
                             All blog posts
                         </h2>
-                    </AnimatedContent>
+                    </AnimatedContent> */}
 
                     {allPosts.length === 0 ? (
                         <div className="rounded-2xl border border-dashed border-gray-300 bg-white px-6 py-12 text-center">
@@ -81,8 +80,8 @@ export default function BlogsPage() {
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                            {allPosts.map((post, index) => (
-                                <AnimatedContent key={post.id} delay={0.05 * index}>
+                            {allPosts.map((post) => (
+                                <div key={post.id}>
                                     <Link to={`/blogs/${post.id}`} className="block h-full">
                                         <article className="group bg-white rounded-2xl overflow-hidden border border-gray-200 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full flex flex-col">
                                             <div className="relative overflow-hidden aspect-video bg-slate-50">
@@ -120,7 +119,7 @@ export default function BlogsPage() {
                                             </div>
                                         </article>
                                     </Link>
-                                </AnimatedContent>
+                                </div>
                             ))}
                         </div>
                     )}

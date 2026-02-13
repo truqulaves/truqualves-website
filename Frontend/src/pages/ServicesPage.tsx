@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import SectionTitle from "../components/section-title";
 import { features } from "../data/features";
 import { 
@@ -18,7 +19,7 @@ export default function ServicesPage() {
                             <ShieldCheckIcon className="w-4 h-4 text-teal-600" />
                             <span className="text-sm font-semibold text-teal-700">Our Services</span>
                         </div>
-                        <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-urbanist">
+                        <h1 className="text-4xl md:text-4xl font-bold text-slate-900 mb-6 font-urbanist">
                             Comprehensive Validation Services
                         </h1>
                         {/* <p className="text-xl text-gray-600 leading-relaxed">
@@ -54,13 +55,13 @@ export default function ServicesPage() {
                                         <p className="text-gray-600 leading-relaxed mb-3 text-xs line-clamp-4">
                                             {service.description}
                                         </p>
-                                        <a 
-                                            href="#contact" 
+                                        <Link
+                                            to="/contact"
                                             className="inline-flex items-center gap-2 text-teal-600 text-sm font-semibold hover:gap-3 transition-all"
                                         >
                                             Learn More
                                             <ArrowRightIcon className="w-3 h-3" />
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -142,19 +143,19 @@ export default function ServicesPage() {
                                 Schedule a discovery call with our experts to discuss your specific validation needs.
                             </p>
                             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                <a 
-                                    href="#contact" 
+                                <Link
+                                    to="/contact"
                                     className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white text-teal-600 rounded-full font-semibold hover:bg-gray-100 transition-colors shadow-lg"
                                 >
                                     Get Started Today
                                     <ArrowRightIcon className="w-5 h-5" />
-                                </a>
-                                <a 
-                                    href="/" 
+                                </Link>
+                                <Link
+                                    to="/"
                                     className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white text-white rounded-full font-semibold hover:bg-white/10 transition-colors"
                                 >
                                     Back to Home
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>
