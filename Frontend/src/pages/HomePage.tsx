@@ -7,7 +7,7 @@ const StatsSection = lazy(() => import("./home/stats-section"));
 const VideoSection = lazy(() => import("./home/video-section"));
 const FeaturesSection = lazy(() => import("./home/features-section"));
 const FaqSection = lazy(() => import("./home/faq-section"));
-const OurTeamSection = lazy(() => import("./home/our-team"));
+// const OurTeamSection = lazy(() => import("./home/our-team"));
 const PricingSection = lazy(() => import("./home/pricing-section"));
 const TestimonialSection = lazy(() => import("./home/testimonial-section"));
 
@@ -34,9 +34,9 @@ export default function HomePage() {
                 <FeaturesSection />
             </Suspense>
             
-            <Suspense fallback={<SectionLoader />}>
+            {/* <Suspense fallback={<SectionLoader />}>
                 <OurTeamSection />
-            </Suspense>
+            </Suspense> */}
             
             <Suspense fallback={<SectionLoader />}>
                 <PricingSection />

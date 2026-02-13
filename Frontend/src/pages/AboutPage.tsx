@@ -1,6 +1,14 @@
+import { lazy, Suspense } from "react";
 import AnimatedContent from "../components/animated-content";
 import { ShieldCheckIcon, TargetIcon, EyeIcon, AwardIcon, UsersIcon, TrendingUpIcon, CheckCircleIcon } from "lucide-react";
 
+const OurTeamSection = lazy(() => import("./home/our-team"));
+
+const SectionLoader = () => (
+    <div className="w-full py-20 flex items-center justify-center">
+        <div className="animate-pulse text-gray-400">Loading...</div>
+    </div>
+);
 export default function AboutPage() {
     const values = [
         {
@@ -201,6 +209,13 @@ export default function AboutPage() {
                     </div>
                 </div>
             </section>
+
+
+            {/* Our Team */}
+            <Suspense fallback={<SectionLoader />}>
+                <OurTeamSection />
+            </Suspense>
+
 
             {/* Certifications & Expertise */}
             <section className="px-4 md:px-16 lg:px-24 xl:px-32 py-20 bg-linear-to-br from-slate-50 to-gray-50 border-b border-gray-200">
