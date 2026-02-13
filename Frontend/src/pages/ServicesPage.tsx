@@ -37,11 +37,11 @@ export default function ServicesPage() {
                         {features.map((service, index) => (
                             <div 
                                 key={index} 
-                                className="h-56 [perspective:1000px] group cursor-pointer"
+                                className="h-56 perspective:[1000px] group cursor-pointer"
                             >
-                                <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
+                                <div className="relative w-full h-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
                                     {/* Front Side */}
-                                    <div className={`${service.cardBg} absolute w-full h-full [backface-visibility:hidden] flex flex-col items-center justify-center p-4 rounded-2xl border border-gray-200 text-center`}>
+                                    <div className={`${service.cardBg} absolute w-full h-full backface-hidden flex flex-col items-center justify-center p-4 rounded-2xl border border-gray-200 text-center`}>
                                         <div className={`${service.iconBg} w-12 h-12 rounded-2xl flex items-center justify-center mb-4`}>
                                             <service.icon className="w-6 h-6 text-white" />
                                         </div>
@@ -51,7 +51,7 @@ export default function ServicesPage() {
                                     </div>
 
                                     {/* Back Side */}
-                                    <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] bg-white flex flex-col items-center justify-center p-4 rounded-2xl border border-gray-200 text-center shadow-xl">
+                                    <div className="absolute w-full h-full backface-hidden transform-[rotateY(180deg)] bg-white flex flex-col items-center justify-center p-4 rounded-2xl border border-gray-200 text-center shadow-xl">
                                         <p className="text-gray-600 leading-relaxed mb-3 text-xs line-clamp-4">
                                             {service.description}
                                         </p>
