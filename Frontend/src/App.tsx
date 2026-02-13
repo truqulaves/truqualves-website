@@ -4,6 +4,7 @@ import Toaster from "./components/toaster";
 import Footer from "./components/footer";
 import LenisScroll from "./components/lenis";
 import Navbar from "./components/navbar";
+import ScrollToTopOnRouteChange from "./components/scrollTop";
 import { Atom } from "react-loading-indicators";
 import ProtectedRoute from "./components/ProtectedRoute";
 
@@ -26,6 +27,7 @@ const MainLayout = () => {
     return (
         <div>
             <LenisScroll />
+            <ScrollToTopOnRouteChange />
             <Navbar />
             <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><Atom color="#0d9488" size="medium" text="" textColor="#0d9488" /></div>}>
                 <Outlet />
