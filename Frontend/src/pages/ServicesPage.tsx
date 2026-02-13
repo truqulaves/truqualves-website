@@ -1,4 +1,3 @@
-import AnimatedContent from "../components/animated-content";
 import SectionTitle from "../components/section-title";
 import { features } from "../data/features";
 import { 
@@ -14,7 +13,7 @@ export default function ServicesPage() {
             {/* Hero Section */}
             <section className="bg-linear-to-br from-teal-50 via-blue-50 to-slate-50 px-4 md:px-16 lg:px-24 xl:px-32 pt-32 pb-5">
                 <div className="max-w-7xl mx-auto">
-                    <AnimatedContent className="text-center max-w-3xl mx-auto">
+                    <div className="text-center max-w-3xl mx-auto">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 border border-teal-200 mb-6">
                             <ShieldCheckIcon className="w-4 h-4 text-teal-600" />
                             <span className="text-sm font-semibold text-teal-700">Our Services</span>
@@ -26,7 +25,7 @@ export default function ServicesPage() {
                             From initial risk assessment to retirement, we support every phase of your system's 
                             lifecycle with precision and transparency.
                         </p> */}
-                    </AnimatedContent>
+                    </div>
                 </div>
             </section>
 
@@ -35,9 +34,8 @@ export default function ServicesPage() {
                 <div className="max-w-7xl mx-auto">
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {features.map((service, index) => (
-                            <AnimatedContent 
+                            <div 
                                 key={index} 
-                                delay={index * 0.1}
                                 className="h-56 [perspective:1000px] group cursor-pointer"
                             >
                                 <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
@@ -65,7 +63,7 @@ export default function ServicesPage() {
                                         </a>
                                     </div>
                                 </div>
-                            </AnimatedContent>
+                            </div>
                         ))}
                     </div>
                 </div>
@@ -81,7 +79,7 @@ export default function ServicesPage() {
                     />
 
                     <div className="grid md:grid-cols-2 gap-6 mt-12">
-                        <AnimatedContent className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
+                        <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
                             <div className="w-10 h-10 bg-teal-100 rounded-xl flex items-center justify-center mb-4">
                                 <CheckCircle2Icon className="w-5 h-5 text-teal-600" />
                             </div>
@@ -90,9 +88,9 @@ export default function ServicesPage() {
                                 Our frameworks are strictly aligned with GAMP 5, 21 CFR Part 11, and Annex 11, 
                                 ensuring you are always audit-ready with complete traceability and documentation integrity.
                             </p>
-                        </AnimatedContent>
+                        </div>
 
-                        <AnimatedContent delay={0.1} className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
+                        <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
                             <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
                                 <CheckCircle2Icon className="w-5 h-5 text-blue-600" />
                             </div>
@@ -101,9 +99,9 @@ export default function ServicesPage() {
                                 Move away from paper-heavy processes. We implement digital validation strategies 
                                 that reduce cycle times by 30-40% while maintaining full regulatory compliance.
                             </p>
-                        </AnimatedContent>
+                        </div>
 
-                        <AnimatedContent delay={0.2} className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
+                        <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
                             <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center mb-4">
                                 <CheckCircle2Icon className="w-5 h-5 text-purple-600" />
                             </div>
@@ -112,9 +110,9 @@ export default function ServicesPage() {
                                 Our team consists of senior validation engineers and QA specialists with decades 
                                 of combined life sciences experience across pharmaceutical and biotech sectors.
                             </p>
-                        </AnimatedContent>
+                        </div>
 
-                        <AnimatedContent delay={0.3} className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
+                        <div className="bg-white p-5 rounded-2xl border border-gray-200 shadow-sm">
                             <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                                 <CheckCircle2Icon className="w-5 h-5 text-orange-600" />
                             </div>
@@ -123,7 +121,7 @@ export default function ServicesPage() {
                                 With 500+ successful validation projects and a 98% first-time audit pass rate, 
                                 we deliver results that matter to your business and regulatory compliance.
                             </p>
-                        </AnimatedContent>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -131,7 +129,7 @@ export default function ServicesPage() {
             {/* CTA Section */}
             <section className="px-4 md:px-16 lg:px-24 xl:px-32 py-20">
                 <div className="max-w-4xl mx-auto">
-                    <AnimatedContent className="bg-linear-to-br from-teal-500 to-blue-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+                    <div className="bg-linear-to-br from-teal-500 to-blue-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
                         {/* Decorative elements */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                         <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
@@ -159,7 +157,7 @@ export default function ServicesPage() {
                                 </a>
                             </div>
                         </div>
-                    </AnimatedContent>
+                    </div>
                 </div>
             </section>
         </div>
