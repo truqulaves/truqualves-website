@@ -9,6 +9,8 @@ import {
 } from "lucide-react";
 
 export default function ServicesPage() {
+    const cardClipPath = "polygon(0 0, calc(100% - 56px) 0, 100% 56px, 100% 100%, 0 100%)";
+
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
@@ -31,39 +33,32 @@ export default function ServicesPage() {
             </section>
 
             {/* Services Grid */}
-            <section className="px-4 md:px-16 lg:px-24 xl:px-32 py-20 border-b border-gray-200">
+            <section className="px-4 md:px-16 lg:px-24 xl:px-32 py-20 bg-[#f5f5f6] border-b border-gray-200">
                 <div className="max-w-7xl mx-auto">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {features.map((service, index) => (
-                            <div 
-                                key={index} 
-                                className="h-56 perspective:[1000px] group cursor-pointer"
+                            <div
+                                key={index}
+                                className="rounded-[34px] p-[1.9px] bg-linear-to-br from-cyan-500/80 to-violet-500/70"
+                                style={{ clipPath: cardClipPath }}
                             >
-                                <div className="relative w-full h-full transition-transform duration-500 transform-3d group-hover:transform-[rotateY(180deg)]">
-                                    {/* Front Side */}
-                                    <div className={`${service.cardBg} absolute w-full h-full backface-hidden flex flex-col items-center justify-center p-4 rounded-2xl border border-gray-200 text-center`}>
-                                        <div className={`${service.iconBg} w-12 h-12 rounded-2xl flex items-center justify-center mb-4`}>
-                                            <service.icon className="w-6 h-6 text-white" />
-                                        </div>
-                                        <h3 className="text-lg font-bold text-slate-900 font-urbanist">
-                                            {service.title}
-                                        </h3>
-                                    </div>
+                                <article
+                                    className="h-full min-h-[240px] bg-[#f5f5f6] rounded-[32px] px-5 py-5 flex flex-col"
+                                    style={{ clipPath: cardClipPath }}
+                                >
+                                    <h3 className="text-lg md:text-xl font-bold text-slate-900 font-urbanist mb-2">
+                                        {service.title}
+                                    </h3>
+                                    <p className="text-sm text-slate-700 leading-relaxed">
+                                        {service.description}
+                                    </p>
 
-                                    {/* Back Side */}
-                                    <div className="absolute w-full h-full backface-hidden transform-[rotateY(180deg)] bg-white flex flex-col items-center justify-center p-4 rounded-2xl border border-gray-200 text-center shadow-xl">
-                                        <p className="text-gray-600 leading-relaxed mb-3 text-xs line-clamp-4">
-                                            {service.description}
-                                        </p>
-                                        <Link
-                                            to="/contact"
-                                            className="inline-flex items-center gap-2 text-teal-600 text-sm font-semibold hover:gap-3 transition-all"
-                                        >
-                                            Learn More
-                                            <ArrowRightIcon className="w-3 h-3" />
-                                        </Link>
+                                    <div className="mt-auto pt-4 flex items-center">
+                                        <div className={`${service.iconBg} w-11 h-11 rounded-lg flex items-center justify-center shadow-sm`}>
+                                            <service.icon className="w-5 h-5 text-white" />
+                                        </div>
                                     </div>
-                                </div>
+                                </article>
                             </div>
                         ))}
                     </div>
