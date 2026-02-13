@@ -34,7 +34,7 @@ export default function PricingSection() {
                 </AnimatedContent>
                 <div className="flex flex-wrap items-start justify-center gap-10 md:gap-4 px-4 mt-12">
                     {pricing.map((plan, index) => (
-                        <AnimatedContent delay={index * 0.10} key={index} className={`p-5 pb-8 w-full sm:max-w-64 rounded-xl border border-gray-200 ${plan.type === 'popular' ? 'bg-gradient-to-br from-teal-50 to-blue-50' : 'bg-white'}`}>
+                        <AnimatedContent delay={index * 0.10} key={index} className={`p-5 pb-8 w-full sm:max-w-64 rounded-xl border border-gray-200 ${plan.type === 'popular' ? 'bg-linear-to-br from-teal-50 to-blue-50' : 'bg-white'}`}>
                             <div className="w-max border border-gray-200 p-2 aspect-square rounded-lg text-teal-500 bg-white">
                                 <plan.icon size={24} />
                             </div>

@@ -15,9 +15,9 @@ export default function VideoSection() {
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 mt-16 w-full items-center">
                     {/* Video Player */}
                     <AnimatedContent className="relative group">
-                        <div className="relative aspect-video rounded-2xl overflow-hidden bg-gradient-to-br from-teal-50 to-blue-50 border-2 border-gray-200 shadow-xl">
+                        <div className="relative aspect-video rounded-2xl overflow-hidden bg-linear-to-br from-teal-50 to-blue-50 border-2 border-gray-200 shadow-xl">
                             {/* Placeholder for video - replace with actual video */}
-                            <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-teal-500/10 to-blue-500/10">
+                            <div className="absolute inset-0 flex items-center justify-center bg-linear-to-br from-teal-500/10 to-blue-500/10">
                                 <div className="text-center">
                                     <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-teal-500/20 backdrop-blur-sm flex items-center justify-center group-hover:bg-teal-500/30 transition-all duration-300">
                                         <PlayCircleIcon className="w-12 h-12 text-teal-600 group-hover:scale-110 transition-transform" />
@@ -111,7 +111,7 @@ export default function VideoSection() {
 
                 {/* Trust Badges */}
                 <AnimatedContent delay={0.3} className="mt-16 w-full">
-                    <div className="bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border border-gray-200">
+                    <div className="bg-linear-to-br from-teal-50 to-blue-50 rounded-2xl p-8 border border-gray-200">
                         <p className="text-center text-sm font-semibold text-gray-500 uppercase tracking-wider mb-6">
                             Trusted by Industry Leaders
                         </p>

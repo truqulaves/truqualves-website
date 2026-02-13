@@ -12,7 +12,7 @@ export default function ServicesPage() {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="bg-gradient-to-br from-teal-50 via-blue-50 to-slate-50 px-4 md:px-16 lg:px-24 xl:px-32 pt-32 pb-20">
+            <section className="bg-linear-to-br from-teal-50 via-blue-50 to-slate-50 px-4 md:px-16 lg:px-24 xl:px-32 pt-32 pb-5">
                 <div className="max-w-7xl mx-auto">
                     <AnimatedContent className="text-center max-w-3xl mx-auto">
                         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-teal-100 border border-teal-200 mb-6">
@@ -22,10 +22,10 @@ export default function ServicesPage() {
                         <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 font-urbanist">
                             Comprehensive Validation Services
                         </h1>
-                        <p className="text-xl text-gray-600 leading-relaxed">
+                        {/* <p className="text-xl text-gray-600 leading-relaxed">
                             From initial risk assessment to retirement, we support every phase of your system's 
                             lifecycle with precision and transparency.
-                        </p>
+                        </p> */}
                     </AnimatedContent>
                 </div>
             </section>
@@ -131,7 +131,7 @@ export default function ServicesPage() {
             {/* CTA Section */}
             <section className="px-4 md:px-16 lg:px-24 xl:px-32 py-20">
                 <div className="max-w-4xl mx-auto">
-                    <AnimatedContent className="bg-gradient-to-br from-teal-500 to-blue-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+                    <AnimatedContent className="bg-linear-to-br from-teal-500 to-blue-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
                         {/* Decorative elements */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"></div>
                         <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"></div>
