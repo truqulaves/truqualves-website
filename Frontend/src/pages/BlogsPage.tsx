@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import { Atom } from "react-loading-indicators";
 
 // Define Interface matching the Backend Data
 interface BackendBlog {
@@ -38,7 +39,7 @@ export default function BlogsPage() {
     if (loading) {
          return (
             <div className="min-h-screen flex items-center justify-center bg-white">
-                 <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-teal-600"></div>
+                <Atom color="#0d9488" size="medium" text="" textColor="#0d9488" />
             </div>
         );
     }
