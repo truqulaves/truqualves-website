@@ -13,7 +13,7 @@ import { auth } from '../config/firebase-config';
 import type { UserProfile } from '../types/auth';
 import { AuthContext, type AuthContextType } from './AuthContext';
 
-const API_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_BACKEND_URL;
 
 
 export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
