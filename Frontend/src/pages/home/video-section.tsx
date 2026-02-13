@@ -43,7 +43,7 @@ export default function VideoSection() {
                         </div>
                         
                         {/* Glow effect */}
-                        <div className="absolute -inset-4 bg-gradient-to-r from-teal-500/20 to-blue-500/20 rounded-3xl blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                        <div className="absolute -inset-4 bg-linear-to-r from-teal-500/20 to-blue-500/20 rounded-3xl blur-2xl -z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </AnimatedContent>
 
                     {/* Content Side */}
@@ -59,7 +59,7 @@ export default function VideoSection() {
 
                         <div className="space-y-4 pt-4">
                             <div className="flex items-start gap-3">
-                                <div className="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <div className="w-6 h-6 rounded-full bg-teal-100 flex items-center justify-center shrink-0 mt-0.5">
                                     <CheckCircle2Icon className="w-4 h-4 text-teal-600" />
                                 </div>
                                 <div>
@@ -71,7 +71,7 @@ export default function VideoSection() {
                             </div>
 
                             <div className="flex items-start gap-3">
-                                <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <div className="w-6 h-6 rounded-full bg-blue-100 flex items-center justify-center shrink-0 mt-0.5">
                                     <CheckCircle2Icon className="w-4 h-4 text-blue-600" />
                                 </div>
                                 <div>
@@ -83,7 +83,7 @@ export default function VideoSection() {
                             </div>
 
                             <div className="flex items-start gap-3">
-                                <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                                <div className="w-6 h-6 rounded-full bg-purple-100 flex items-center justify-center shrink-0 mt-0.5">
                                     <CheckCircle2Icon className="w-4 h-4 text-purple-600" />
                                 </div>
                                 <div>
