@@ -1,13 +1,13 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { lazy, Suspense, useState, useEffect } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
-import DashboardView from './views/DashboardView';
-import BlogsView from './views/BlogsView';
-import UserManagementView from './views/UserManagementView';
-import EventsView from './views/EventsView';
 import type { ViewType } from './types';
 import { ICONS } from './constants';
+
+const DashboardView = lazy(() => import('./views/DashboardView'));
+const BlogsView = lazy(() => import('./views/BlogsView'));
+const UserManagementView = lazy(() => import('./views/UserManagementView'));
+const EventsView = lazy(() => import('./views/EventsView'));
 
 const PlaceholderView: React.FC<{ title: string; description: string }> = ({ title, description }) => (
   <div className="animate-in fade-in slide-in-from-bottom-4 duration-500 flex flex-col items-center justify-center py-20 bg-white rounded-3xl border border-slate-100 shadow-sm px-6 text-center">
@@ -83,7 +83,15 @@ const App: React.FC = () => {
         <Header activeView={activeView} toggleSidebar={toggleSidebar} />
         
         <main className={`p-4 md:p-8 w-full ${activeView === 'Events' ? 'max-w-none' : 'max-w-7xl mx-auto'}`}>
-          {renderContent()}
+          <Suspense
+            fallback={
+              <div className="flex min-h-[280px] items-center justify-center rounded-2xl border border-slate-100 bg-white text-slate-500 shadow-sm">
+                Loading view...
+              </div>
+            }
+          >
+            {renderContent()}
+          </Suspense>
         </main>
       </div>
 
