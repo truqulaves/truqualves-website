@@ -1,7 +1,5 @@
 import { sendContactEmail } from "../services/emailService.js";
 import Event from "../model/Event.js";
-import dotenv from "dotenv";
-dotenv.config();
 export const handleContactForm = async (req, res) => {
   try {
     const { firstName, lastName, email, company, phone, service, message } =

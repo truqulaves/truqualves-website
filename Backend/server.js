@@ -1,5 +1,5 @@
+import "dotenv/config";
 import express from "express";
-import dotenv from "dotenv";
 import contactRoutes from "./routes/contactRoutes.js";
 import blogRoutes from "./routes/blogRoutes.js";
 import authRoutes from "./routes/authRoutes.js";
@@ -7,7 +7,6 @@ import adminRoutes from "./routes/adminRoutes.js";
 import eventsRoutes from "./routes/eventsRoutes.js";
 import connectDB from "./services/mongodbService.js";
 import corsMiddleware from "./middleware/corsMiddleware.js";
-dotenv.config();
 
 const app = express();
 const port = process.env.PORT || 5000;
