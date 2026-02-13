@@ -62,21 +62,21 @@ export default function ContactPage() {
     return (
         <div className="min-h-screen bg-white">
             {/* Hero Section */}
-            <section className="bg-linear-to-br from-teal-50 via-blue-50 to-slate-50 px-4 md:px-16 lg:px-24 xl:px-32 pt-32 pb-20 border-b border-gray-200">
+            {/* <section className="bg-linear-to-br from-teal-50 via-blue-50 to-slate-50 px-4 md:px-16 lg:px-24 xl:px-32 pt-32 pb-20 border-b border-gray-200">
                 <div className="max-w-4xl mx-auto text-center">
                     <AnimatedContent>
                         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 mb-6">
                             <span className="text-sm font-semibold text-teal-700">Contact Us</span>
                         </div>
-                        {/* <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 font-urbanist">
+                        <h1 className="text-5xl md:text-6xl font-bold text-slate-900 mb-6 font-urbanist">
                             Let's Start a Conversation
-                        </h1> */}
+                        </h1>
                         <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
                             Have questions about our validation services? Ready to ensure compliance for your next project? We're here to help.
                         </p>
                     </AnimatedContent>
                 </div>
-            </section>
+            </section> */}
 
             {/* Content Section */}
             
@@ -94,7 +94,7 @@ export default function ContactPage() {
                         </div>
                         <p className="-translate-x-2 text-xs text-slate-600 font-medium">Join community of 1m+ founders </p>
                     </div>
-                    <h1 className='font-bold text-3xl md:text-5xl/15 text-slate-900 max-w-[470px] mt-4 font-urbanist'>
+                    <h1 className='font-bold text-3xl md:text-4xl/15 text-slate-900 max-w-[470px] mt-4 font-urbanist'>
                         Ready to Transform Your Digital Experience?
                     </h1>
                     <p className='text-base text-gray-600 max-w-[345px] mt-4 mx-auto md:mx-0 leading-relaxed'>
